@@ -1,0 +1,78 @@
+@import url("./font-family.css");
+.DragDrop{
+    position: absolute;
+    background-color: rebeccapurple;
+    left: 1%;
+    top:10%;
+    width: 15%;
+    height: 45%;
+  }
+.showBorders{
+    height: 75%;
+    border: 2px;
+    border-color: var(--text-color);
+    border-style: dashed;
+    margin: 10px;
+}
+.upload-area{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.song-name{
+    font-family: "gutter-regular";
+    color:#b476db;
+    padding: 5px;
+    text-align: center;
+}
+.upload-Button{
+    display: inline-block;  
+    border-radius: 4px;  
+    background-color: var(--button-color);  
+    border: none;  
+    color: var(--text-color);  
+    text-align: center;  
+    font-size: 21px;  
+    padding: 10px;  
+    width: 96%;  
+    transition: all 0.5s;  
+    cursor: pointer;  
+    margin: 5px;
+    transform: translateY(-15%);
+}
+.upload-Button:hover{
+    background-color: var(--button-hover);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.filter-white{
+    width: 10%;
+    height: 100%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    animation: appear-from-left 0.1s;
+}
+.uploaded-file{
+    width: 80%;
+    margin: 5%;
+    filter: invert(58%) sepia(28%) saturate(976%) hue-rotate(231deg) brightness(90%) contrast(89%);
+}
+
+.DragDrop-Modal{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.592);
+    width: 100%;
+    height: 100%;
+}
+@keyframes appear-from-left {
+    0%{
+        transform: translate(-10%);
+    }
+    90%{
+        transform: translate(5%);
+    }
+    100%{
+        transform: translate(0%);
+    }
+}

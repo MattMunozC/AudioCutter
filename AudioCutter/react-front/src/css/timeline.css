@@ -1,0 +1,105 @@
+@import url(const.css);
+.timeline-component{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+.timeline{ 
+    width: 99%;
+    aspect-ratio: 100/10;
+}
+.timeline-wrapper{
+    position: relative;
+    bottom:0%;
+    width: 89%;
+    margin: 1%;
+    margin-left: 10%;
+    border-radius: 10px;
+    background-color: var(--darker-primary-color);
+    box-shadow: 5px 10px 5px var(--shadows-color) inset;
+    overflow: hidden;
+    aspect-ratio: 100/10;
+}
+
+.timestamp{
+    position: relative;
+    margin-left: 10%;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 89%;
+    overflow: hidden;
+
+}
+
+.timestamp-function{
+    position: absolute;
+    width: 9.5%;
+    padding-left: 0.5%;
+    height: 100%;
+    display: grid;
+    /*
+    background-color: red;*/
+    grid-template-columns: 1fr;
+}
+.timepoint{
+    width: 80%;
+    height: 70%;
+    margin: 5%;
+    background-color: var(--darker-primary-color);
+    border: none;
+    box-shadow: 0px 1px 5px var(--shadows-color) inset;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-family: 'gutter-regular';
+}
+.cut-Button{
+    display: inline-block;  
+    border-radius: 4px;  
+    background-color: var(--button-color);  
+    border: none;  
+    color: var(--text-color);  
+    text-align: center;  
+    font-size: 15px;  
+    padding: 10px;  
+    width: 89%;  
+    transition: all 0.5s;  
+    cursor: pointer;  
+    margin: 5px;
+}
+.cut{
+    position: absolute;
+    top:0px;
+    height: 1000px;
+    background-color: var(--cut-color);
+    overflow: hidden;
+    width: 100px;
+    
+}
+.scissor{
+    width:20%;
+    padding-left:5px; 
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.resizer {
+    position: absolute;
+    background: var(--resizer-color);
+}
+
+.rr{
+    cursor: col-resize;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 5px;
+
+}
+
+.rl{
+    cursor: col-resize;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 5px;
+}

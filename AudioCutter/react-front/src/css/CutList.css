@@ -1,0 +1,14 @@
+@import url(const.css);
+.cutlist{
+    position: absolute;
+    background-color: var(--darker-primary-color);
+    right: 1%;
+    top: 10%;
+    width: 40%;
+    aspect-ratio: 9/5;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px var(--shadows-color) inset;
+    overflow-y: scroll;
+    scrollbar-color: black gray;
+    scrollbar-gutter: stable both-edges;
+}

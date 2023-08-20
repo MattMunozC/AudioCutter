@@ -1,0 +1,11 @@
+:root{
+/*Background colors*/
+    --body-color: rgb(70, 70, 70);
+    --button-color: #542782;  
+    --button-hover: rgb(122, 71, 173);  
+    --shadows-color: rgb(41, 41, 41);
+    --darker-primary-color: rgb(62, 62, 62);
+    --cut-color:#55278298;
+    --resizer-color:white;
+    --text-color: white;
+}
