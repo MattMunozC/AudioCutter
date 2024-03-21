@@ -207,7 +207,7 @@ export function CutList(){
     video.pause()
   }
   return(<div className='cutlist'>
-    <video id="Audio-player" class="video" src="http://127.0.0.1:8000/testing">
+    <video id="Audio-player" className="video" src="http://127.0.0.1:8000/testing">
       Your browser does not support the <code>audio</code> element.
     </video>
     <button onClick={playButton}>Click Me</button>

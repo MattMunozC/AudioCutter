@@ -1,7 +1,6 @@
 from pydub import AudioSegment
 from winsound import PlaySound,SND_FILENAME
 import eyed3
-import requests
 from io import BytesIO
 class Track():
     SECOND=1000
@@ -45,7 +44,7 @@ track_list=[
     ("5:40","Clouds"),
     ("1:41","Kissing Goodnight")
     ]
-PATH=r"AudioCutter\\media\\Kissing Goodnight_NLfO42r.mp3"
+PATH=r"Results\\test.mp3"
 needle_pos=0
 loaded_album=AudioSegment.from_mp3(PATH)
 #response = requests.get(r"https://upload.wikimedia.org/wikipedia/en/0/02/Rideontime_tatsyamashita.jpg")  

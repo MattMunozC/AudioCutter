@@ -39,13 +39,26 @@ def audio_cutter(request,song_name,begin,end):
     print(begin,end)
     return response  
 def testing(request):
-    sample=AudioSegment.from_mp3(os.path.join(settings.BASE_DIR,"media\Kissing Goodnight_NLfO42r.mp3"))[0:21*1000]
-    buf = io.BytesIO()
-    sample.export(buf, format="ogg")
-    response = HttpResponse()
-    response.write(buf.getvalue())
-    response['Content-Type'] ='audio/ogg'
-    return response  
+    try:
+        sample=AudioSegment.from_mp3(os.path.join(settings.BASE_DIR,"media\Kissing Goodnight_NLfO42r.mp3"))[0:21*1000]
+        buf = io.BytesIO()
+        sample.export(buf, format="ogg")
+        response = HttpResponse()
+        response.write(buf.getvalue())
+        response['Content-Type'] ='audio/ogg'
+        return response  
+    except:
+        return JsonResponse({"error":"nada que ver aqui"})
+    
+#TEST FUNCTION DELETE WHEN NO LONGER NEEDED
+def imgtest(request,folder,imgname):
+    PATH="NOTHING HERE BUT US"
+    print(folder)
+    with open(os.path.join(PATH,folder,imgname),"rb") as image:
+        response=HttpResponse()
+        response.write(image.read())
+        response['Content-Type'] ='image/png'
+        return response
 """
 def AudioSegment_to_BytesIO_Example(request):
     sample=AudioSegment.from_mp3(os.path.join(settings.BASE_DIR,"media\Kissing Goodnight_NLfO42r.mp3"))[0:21*1000]

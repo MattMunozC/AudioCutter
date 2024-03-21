@@ -131,14 +131,16 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#Cualquier aqui esta disponible en [BASE_URL]/static
 STATICFILES_DIRS=[
     #os.path.join(BASE_DIR,"react-front/build/static"),
     os.path.join(BASE_DIR,"testing/build/static"),
-    os.path.join(BASE_DIR,"testing/build"),
+    #os.path.join(BASE_DIR,"testing/build"),
     os.path.join(BASE_DIR,"media")
 
 ]
 
+#No sé exactamente que hacen estas lidas
 STATIC_ROOT=os.path.join(BASE_DIR,"static/")
-MEDIA_URL=os.path.join(BASE_DIR,"media/")
+MEDIA_URL="media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"media/")

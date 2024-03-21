@@ -17,14 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from testing.views import audio_store,upload_template,testing,audio_cutter
 from django.conf import settings
 from django.conf.urls.static import static
+from cutter.views import audio_store,audio_cutter,cutter
+from testing.views import upload_template,testing,imgtest
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path("",upload_template),
     path("upload_audio",audio_store),
     path("testing",testing),
-    path("song/<song_name>/from/<begin>/to/<end>",audio_cutter)
-]
+    path("song/<song_name>/from/<begin>/to/<end>",audio_cutter),
+    path("something/<path:folder>/<str:imgname>",imgtest)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
