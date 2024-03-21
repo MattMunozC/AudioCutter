@@ -1,0 +1,1 @@
+This app currently uses Python as back-end we're investigating if it's posible to serve an static javascript file for this specific purpose so we could deploy this directly into Github, please stay tune!
