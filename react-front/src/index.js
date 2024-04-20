@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
-import {FileUpload,Modal,Timeline,Logo,CutList} from './App'
+import {FileUpload,Modal,Timeline,Logo,CutList} from './App';
+import {Player } from './player';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,6 +11,7 @@ root.render(
     <Logo/>
     <Modal/>
     <CutList/>
+    <Player/>
     <FileUpload/>
     <Timeline/>
   </React.StrictMode>

@@ -23,7 +23,7 @@ from cutter.views import audio_store,audio_cutter,cutter
 from testing.views import upload_template,testing,imgtest
 
 urlpatterns = [
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path("",upload_template),
     path("upload_audio",audio_store),
     path("testing",testing),
